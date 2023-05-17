@@ -48,7 +48,7 @@ The algorithm for updating the grid is as follows:
     Based on the number of live neighbors and the current state of the cell, update the new state of the cell.
     Copy the new state of the grid to the current state of the grid.
 
-To parallelize this algorithm, the grid is divided into equal-sized sections, with each thread responsible for updating a section of the grid. The number of threads is specified by the NUM_THREADS constant.
+To parallelize this algorithm, the grid is divided into equal-sized sections, with each thread responsible for updating a section of the grid. The number of threads is specified by the **NUM_THREADS** constant.
 ### Threading
   
 Each thread is responsible for updating a section of the grid. The **grid_work** function takes a **thread_data_t struct** as an argument, which specifies the section of the grid to update. The struct also contains pointers to the current and new states of the grid.
